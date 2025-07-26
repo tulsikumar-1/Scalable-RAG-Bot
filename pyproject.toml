@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "rag_app"
+version = "0.1.0"
+description = "Offline customizable RAG system with Streamlit, FAISS, SQLite, and offline LLM"
+authors = ["Tulsi Kumar <engr.tulsikumar@gmail.com>"]
+readme = "README.md"
+packages = [{include = "data"}, {include = "embeddings"}, {include = "index"}, {include = "llm"}, {include = "retrieval"}, {include = "schemas"}, {include = "storage"}]
+
+[tool.poetry.dependencies]
+python = ">3.10"
+streamlit = "^1.22.0"
+pdfplumber = "^0.7.6"
+sqlalchemy = "^2.0.10"
+sentence-transformers = "^2.2.2"
+faiss-cpu = "^1.7.4"
+pydantic = "^1.10.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
